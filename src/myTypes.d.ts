@@ -44,3 +44,15 @@ export type BuddyList = {
   administrator: Administrator;
   members: Buddy[];
 };
+
+// The FriendPartial type has the same structure as Friend, but all its properties are optional.
+export type FriendPartial = Partial<Friend>
+// The EventPass type has the same properties as Colleague except for contact and has an additional property called passCode.
+export type EventPass = Omit<Colleague, "contact"> & {
+  passCode: number;
+}
+// Immutable person type, based on Friend type
+// generates a type with the same structure as Friend except for age and dob.
+export type SecureFriendContact = Readonly<Pick<Friend, "name" | "phone" >>
+
+export type Person = Pick<Friend, "name" | "age"> & Pick<Colleague, "contact">;

@@ -14,7 +14,13 @@ const friend2: Friend = {
     interests: ['Music', 'Sport']
 };
 
-export const friends: Friend[] = [friend1, friend2];
+const friend3: Friend = {
+    name: "Ralph Graham",
+    phone: "086-112233",
+    age: 50
+};
+
+export const friends: Friend[] = [friend1, friend2, friend3];
 // console.log(friends[1]);
 
 //---------------------------
